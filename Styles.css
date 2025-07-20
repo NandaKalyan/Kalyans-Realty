@@ -1,0 +1,505 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden !important;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden !important;
+  max-width: 100%;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: white !important;
+}
+
+.navbar-toggler {
+  border: none;
+  background: transparent;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Hide the menu by default */
+.custom-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 20px;
+  background-color: #111;
+  padding: 1rem;
+  border-radius: 8px;
+  z-index: 999;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Show menu when toggled */
+.custom-dropdown-menu.show {
+  display: block;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.custom-dropdown-menu.hide {
+  display: block;
+  animation: fadeOut 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.dropdown-link {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+}
+.dropdown-link:hover {
+  color: #d4af37;
+}
+
+.hero {
+  color: white;
+  position: relative;
+  height: 100vh; /* Use 100dvh for correct mobile height */
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  animation: slideDown 4s ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust darkness here */
+  z-index: -1;
+}
+
+.hero .content {
+  position: relative;
+  z-index: 1;
+  padding: 1rem;
+}
+
+.text-gold {
+  color: #d4af37;
+}
+.plus {
+  font-size: 1.5rem;
+  vertical-align: super;
+  color: #d4af37;
+  margin-left: 2px;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: #d4af37;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.text-gold {
+  color: #d4af37;
+}
+
+.lead {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #444;
+}
+
+.custom-card {
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.25);
+}
+
+.card.review-card {
+  height: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .hero {
+    height: 100vh;
+    padding: 1rem;
+  }
+  .hero h1 {
+    font-size: 1.3rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+}
+
+/* For Properties.html */
+
+/* === Residential Section Styles === */
+
+.center-heading {
+  text-align: center;
+  margin: 60px auto; /* top & bottom margin */
+  display: block;
+}
+
+.property-card {
+  background: whitesmoke;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-secondary);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid #e5e7eb;
+}
+.property-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-primary);
+}
+
+.property-image {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.property-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--gradient-secondary);
+  color: white;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 999px;
+  z-index: 2;
+}
+
+.property-details {
+  padding: 1.1rem;
+}
+
+.property-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  margin-bottom: 0.4rem;
+}
+
+.property-location {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.property-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 1.2rem;
+}
+
+.feature {
+  font-size: 0.85rem;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.property-price {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .property-price {
+    font-size: 1.5rem;
+  }
+
+  .property-title {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .property-features {
+    justify-content: center;
+  }
+}
+
+/* Ensure always 2 columns on all screen sizes */
+.residential-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* On mobile, force stack */
+@media (max-width: 640px) {
+  .residential-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contact Styles */
+.contact-card {
+  background: #ffffff85;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+}
+
+.contact-heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.contact-info {
+  color: #52565a;
+}
+
+/* New rule to make all links inside contact cards grey */
+.contact-card a {
+  color: black;
+  text-decoration: none; /* Optional: remove underline */
+}
+
+.contact-card a:hover {
+  color: whitesmoke; /* Slightly darker grey on hover */
+}
+
+/* About Section */
+.team-card {
+  background: gainsboro;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.team-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.hero-about-heading {
+  animation: floatUpDown 2.5s ease-in-out infinite;
+}
+
+.partner-card {
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+.partner-card:hover {
+  transform: translateY(-5px);
+}
+.partner-card img {
+  max-height: 60px;
+  margin-bottom: 0.75rem;
+  object-fit: contain;
+}
+
+.about-section {
+  background: #f3ecec;
+  padding: 60px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  margin-bottom: 60px;
+}
+
+.about-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 1.125rem;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.about-image {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}

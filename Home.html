@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalyans - Real Estate Agency</title>
+    <link rel="icon" type="image/x-icon" href="Assets/favicon-16x16.png" />
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Animate.css -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- SwiperJS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="Styles.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="#">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            style="
+              height: 55px;
+              border: 1px #ffffff7a solid;
+              border-radius: 12px 0px 12px 0px;
+            "
+          >
+            <source src="Assets/Videos/Kalyans.mp4" type="video/mp4" />
+          </video>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          aria-label="Toggle navigation"
+          onclick="document.getElementById('navMenu').classList.toggle('show')"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Custom Dropdown Menu -->
+        <div class="custom-dropdown-menu" id="navMenu">
+          <ul class="list-unstyled text-center mb-0 mx-4">
+            <li><a class="dropdown-link" href="#Statistics">Home</a></li>
+            <li>
+              <a class="dropdown-link" href="Properties.html">Properties</a>
+            </li>
+            <li><a class="dropdown-link" href="About.html">About</a></li>
+            <li><a class="dropdown-link" href="Contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100vh;
+          width: 100%;
+          object-fit: cover;
+          z-index: -1;
+        "
+      >
+        <source src="Assets/Videos/Intro.mp4" type="video/mp4" />
+      </video>
+      <div class="container content text-center text-white">
+        <h1
+          class="hero-heading animate__animated animate__fadeInDown slide-down"
+        >
+          „Beyond Realty. It's Luxury.“
+        </h1>
+      </div>
+    </div>
+
+    <!-- Statistics Section -->
+    <section class="py-5 bg-light text-dark text-center" id="Statistics">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-4" data-aos="fade-up">
+            <h2 class="display-4 text-gold">
+              <span class="counter" data-target="2000000">0</span
+              ><span class="plus">+</span>
+            </h2>
+            <p class="lead">Million+ Customers Worldwide</p>
+          </div>
+
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="display-4 text-gold">
+              <span class="counter" data-target="500">0</span
+              ><span class="plus">+</span>
+            </h2>
+            <p class="lead">Luxury Properties Across India</p>
+          </div>
+
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="display-4 text-gold">
+              <span class="counter" data-target="45">0</span
+              ><span class="plus">+</span>
+            </h2>
+            <p class="lead">Partners Worldwide</p>
+          </div>
+
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="display-4 text-gold">
+              <span class="counter" data-target="17">0</span
+              ><span class="plus">+</span>
+            </h2>
+            <p class="lead">Years of Experience</p>
+          </div>
+
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="display-4 text-gold">
+              <span class="counter" data-target="150">0</span
+              ><span class="plus">+</span>
+            </h2>
+            <p class="lead">Cities Covered</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-5 bg-white text-dark text-center">
+      <div class="container">
+        <h2 class="section-title mb-3">What We Do</h2>
+        <img
+          src="Assets/WorkIcon.gif"
+          alt="What We Do"
+          width="120"
+          class="mb-4 p-4"
+        />
+        <!-- Card 1 -->
+        <div class="mb-4" data-aos="fade-up">
+          <div class="card custom-card shadow-lg border-0">
+            <div class="card-body p-5">
+              <h4 class="card-title text-gold mb-3">Browse Luxury Listings</h4>
+              <p class="card-text">
+                Explore an exclusive collection of high-end residential and
+                commercial properties. Our listings are curated to ensure you
+                find the perfect match based on your taste, location, and
+                investment goals.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="mb-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="card custom-card shadow-lg border-0">
+            <div class="card-body p-5">
+              <h4 class="card-title text-gold mb-3">Connect with Experts</h4>
+              <p class="card-text">
+                Our professional real estate consultants guide you every step of
+                the way — from virtual tours and on-site visits to legal
+                paperwork and negotiation strategies tailored for luxury
+                investments.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card custom-card shadow-lg border-0">
+            <div class="card-body p-5">
+              <h4 class="card-title text-gold mb-3">Own with Confidence</h4>
+              <p class="card-text">
+                Once you choose your ideal property, we handle the closing
+                process with precision. From documentation to secure payments,
+                we make owning a luxury property smooth and hassle-free.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="position-relative text-white text-center py-5">
+      <!-- Video Background -->
+      <video autoplay muted loop playsinline class="bg-video">
+        <source src="Assets/Videos/WhyUs.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Overlay -->
+      <div class="overlay"></div>
+
+      <!-- Content -->
+      <div class="container position-relative">
+        <h2 class="section-title mb-5 text-white">Why Choose Us</h2>
+        <div class="row justify-content-center">
+          <!-- Card 1 -->
+          <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up">
+            <div
+              class="card feature-card border-0 shadow-sm h-100 bg-white text-dark"
+            >
+              <div class="card-body p-4">
+                <h5 class="card-title text-gold mb-2">
+                  100% Verified Listings
+                </h5>
+                <p class="card-text">
+                  Every property is thoroughly vetted for authenticity and
+                  legality.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="col-md-3 col-sm-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="card feature-card border-0 shadow-sm h-100 bg-white text-dark"
+            >
+              <div class="card-body p-4">
+                <h5 class="card-title text-gold mb-2">Expert Support</h5>
+                <p class="card-text">
+                  Professional advisors guide you from first call to final deal.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="col-md-3 col-sm-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="card feature-card border-0 shadow-sm h-100 bg-white text-dark"
+            >
+              <div class="card-body p-4">
+                <h5 class="card-title text-gold mb-2">Transparent Deals</h5>
+                <p class="card-text">
+                  No hidden costs or surprises — just clear, honest pricing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="col-md-3 col-sm-6 mb-4"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="card feature-card border-0 shadow-sm h-100 bg-white text-dark"
+            >
+              <div class="card-body p-4">
+                <h5 class="card-title text-gold mb-2">
+                  Legal & Financial Help
+                </h5>
+                <p class="card-text">
+                  Full support with registration, loans, and property
+                  documentation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="py-5 bg-white text-dark">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title mb-3 d-inline-block" data-aos="zoom-in">
+            Stories of Trust
+          </h2>
+          <img
+            src="Assets/TrustIcon.gif"
+            alt="What We Do"
+            width="70"
+            class="mb-3"
+            data-aos="fade-right"
+          />
+        </div>
+        <div class="row gx-5 gy-4">
+          <!-- Review 1 -->
+          <div class="col-md-6 d-flex" data-aos="fade-up">
+            <div
+              class="card review-card border-0 shadow-lg w-100 p-4 rounded-4"
+            >
+              <div class="d-flex align-items-center h-100">
+                <img
+                  src="Assets/client1.jpg"
+                  class="rounded-circle flex-shrink-0 me-4"
+                  width="90"
+                  height="90"
+                  alt="Client 1"
+                />
+                <div
+                  class="flex-grow-1 d-flex flex-column justify-content-center h-100"
+                >
+                  <p class="mb-3 small text-muted lh-base">
+                    <i class="fas fa-quote-left text-gold me-2"></i>
+                    Kalyans Realty made buying our dream villa effortless. Their
+                    professionalism and transparency are unmatched.
+                    <i class="fas fa-quote-right text-gold ms-2"></i>
+                  </p>
+                  <footer class="blockquote-footer small">
+                    Aarav Mehta, <cite>Mumbai</cite>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="card review-card border-0 shadow-lg w-100 p-4 rounded-4"
+            >
+              <div class="d-flex align-items-center h-100">
+                <img
+                  src="Assets/client2.jpg"
+                  class="rounded-circle flex-shrink-0 me-4"
+                  width="90"
+                  height="90"
+                  alt="Client 2"
+                />
+                <div
+                  class="flex-grow-1 d-flex flex-column justify-content-center h-100"
+                >
+                  <p class="mb-3 small text-muted lh-base">
+                    <i class="fas fa-quote-left text-gold me-2"></i>
+                    The team helped me find the perfect investment property in
+                    Bangalore. Highly recommend!
+                    <i class="fas fa-quote-right text-gold ms-2"></i>
+                  </p>
+                  <footer class="blockquote-footer small">
+                    Priya Reddy, <cite>Bangalore</cite>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div
+              class="card review-card border-0 shadow-lg w-100 p-4 rounded-4"
+            >
+              <div class="d-flex align-items-center h-100">
+                <img
+                  src="Assets/client3.jpg"
+                  class="rounded-circle flex-shrink-0 me-4"
+                  width="90"
+                  height="90"
+                  alt="Client 3"
+                />
+                <div
+                  class="flex-grow-1 d-flex flex-column justify-content-center h-100"
+                >
+                  <p class="mb-3 small text-muted lh-base">
+                    <i class="fas fa-quote-left text-gold me-2"></i>
+                    Their legal and financial guidance gave us peace of mind
+                    throughout the buying process.
+                    <i class="fas fa-quote-right text-gold ms-2"></i>
+                  </p>
+                  <footer class="blockquote-footer small">
+                    Rohit Kapoor, <cite>Hyderabad</cite>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 4 -->
+          <div class="col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div
+              class="card border-0 shadow-lg w-100 p-4 rounded-4 h-100 d-flex flex-column justify-content-center text-center"
+            >
+              <p class="text-muted small mb-3 px-3 lh-base">
+                <i class="fas fa-quote-left text-gold me-2"></i>
+                And many more stories of satisfaction, trust, and seamless
+                experiences with Kalyans Realty.
+                <i class="fas fa-quote-right text-gold ms-2"></i>
+              </p>
+              <footer class="blockquote-footer small">
+                Over <strong>2,00,000+</strong> Happy Clients & Growing
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-5 pb-5">
+      <div class="container">
+        <div class="row gy-5">
+          <!-- About -->
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-4">Kalyans</h5>
+            <p class="text-secondary small mb-3">
+              Discover premium real estate opportunities with Kalyans Realty. We
+              bring you only the finest properties with professional service you
+              can trust.
+            </p>
+            <p class="text-secondary small mb-0">Where luxury meets trust.</p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-6">
+            <h6 class="text-white mb-3">Quick Links</h6>
+            <ul class="list-unstyled text-secondary small">
+              <li class="mb-2">
+                <a href="Home.html" class="text-decoration-none text-white-50"
+                  >Home</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="Properties.html" class="text-decoration-none text-white-50"
+                  >Properties</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="About.html" class="text-decoration-none text-white-50"
+                  >About</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="Contact.html" class="text-decoration-none text-white-50"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="col-lg-2 col-md-6">
+            <h6 class="text-white mb-3">Our Services</h6>
+            <ul class="list-unstyled text-secondary small">
+              <li class="mb-2">Luxury Homes</li>
+              <li class="mb-2">Commercial Spaces</li>
+              <li class="mb-2">Legal Assistance</li>
+              <li class="mb-2">Investment Guidance</li>
+            </ul>
+          </div>
+
+          <!-- Resources -->
+          <div class="col-lg-2 col-md-6">
+            <h6 class="text-white mb-3">Resources</h6>
+            <ul class="list-unstyled text-secondary small">
+              <li class="mb-2">Blog</li>
+              <li class="mb-2">FAQs</li>
+              <li class="mb-2">Terms & Conditions</li>
+              <li class="mb-2">Privacy Policy</li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-lg-3 col-md-12">
+            <h6 class="text-white mb-3">Contact</h6>
+            <p class="small text-secondary mb-2">
+              <i class="fas fa-map-marker-alt text-white me-2"></i> Bangalore,
+              India
+            </p>
+            <p class="small text-secondary mb-2">
+              <i class="fas fa-phone text-white me-2"></i> +91 98765 43210
+            </p>
+            <p class="small text-secondary mb-3">
+              <i class="fas fa-envelope text-white me-2"></i>
+              info@kalyansrealty.com
+            </p>
+            <div class="mt-3">
+              <a href="#" class="text-white-50 me-3 fs-5"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-white-50 me-3 fs-5"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-white-50 me-3 fs-5"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-white-50 fs-5"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-secondary mt-5" />
+
+        <div class="text-center pt-3">
+          <p class="small text-white-50 mb-0">
+            &copy; 2025 Kalyans. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap & Plugins JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      // Counter Animation
+      const counters = document.querySelectorAll(".counter");
+      const speed = 100;
+
+      const animateCounter = (counter) => {
+        const updateCount = () => {
+          const target = +counter.getAttribute("data-target");
+          const count = +counter.innerText.replace(/,/g, "");
+          const inc = target / speed;
+
+          if (count < target) {
+            const newCount = Math.ceil(count + inc);
+            counter.innerText = newCount.toLocaleString();
+            setTimeout(updateCount, 10);
+          } else {
+            counter.innerText = target.toLocaleString();
+          }
+        };
+        updateCount();
+      };
+
+      const options = {
+        threshold: 0.5,
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const counter = entry.target;
+            animateCounter(counter);
+            observer.unobserve(counter); // Trigger only once
+          }
+        });
+      }, options);
+
+      counters.forEach((counter) => {
+        observer.observe(counter);
+      });
+    </script>
+  </body>
+</html>
